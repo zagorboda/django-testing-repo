@@ -1,0 +1,6 @@
+accounts/__pycache__
+mysite/__pycache__
+user/__pycache__
+
+manage.py
+db.sqlite3
