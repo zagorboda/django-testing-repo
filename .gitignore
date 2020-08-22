@@ -1,6 +1,7 @@
 accounts/__pycache__
 mysite/__pycache__
 user/__pycache__
+venv/
 
 manage.py
 db.sqlite3

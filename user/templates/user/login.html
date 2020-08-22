@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <div class="container">
+          <label for="username"><b>Username</b></label>
+          <input class="form-control" type="text" placeholder="Enter Username" name="username" id="username" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input class="form-control" type="password" placeholder="Enter Password" name="password" id="password" required>
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-info mt-2 text-center">Submit</button>
+          </div>
+        </div>
+      
+        <!-- <div class="container signin">
+          <p>Already have an account? <a href="#">Sign in</a>.</p>
+        </div> -->
+      </form>
+
+      <div>
+        {% for message in messages %}
+          <p>{{message}}</p>
+        {% endfor %}
+      </div>
+</body>
+</html>
